@@ -1,0 +1,35 @@
+<!-- Shell Application - Module Federation Host -->
+<div style="min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem;">
+  <header style="text-align: center; margin-bottom: 2rem;">
+    <h1 style="color: white; font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: bold;">
+      Shell Application
+    </h1>
+    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+      Module Federation Host - Loading Microfrontends
+    </p>
+  </header>
+
+  <main style="max-width: 1200px; margin: 0 auto;">
+    <div style="background: rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem;">
+      <h2 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">
+        🎯 Child Microfrontend (with Tailwind CSS)
+      </h2>
+      <div id="child-app-container">
+        <p style="color: rgba(255,255,255,0.7);">Loading child application...</p>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <button 
+        (click)="loadChildApp()"
+        style="background: #4338ca; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 0.5rem; font-size: 1rem; cursor: pointer; transition: background-color 0.2s;"
+        onmouseover="this.style.backgroundColor='#3730a3'"
+        onmouseout="this.style.backgroundColor='#4338ca'"
+      >
+        Load Child Microfrontend
+      </button>
+    </div>
+  </main>
+
+  <router-outlet></router-outlet>
+</div>
